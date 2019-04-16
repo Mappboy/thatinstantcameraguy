@@ -1,16 +1,7 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
-      <div class="text-xs-center">
-      </div>
+  <v-layout column justify-center align-center>
+    <v-flex xs12 sm8 md6>
+      <div class="text-xs-center"></div>
       <cassette />
     </v-flex>
   </v-layout>

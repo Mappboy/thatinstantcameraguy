@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify/lib'
-import colors from 'vuetify/es5/util/colors'
+// import colors from 'vuetify/es5/util/colors'
 
 Vue.use(Vuetify, {
   theme: {
@@ -9,6 +9,6 @@ Vue.use(Vuetify, {
     accent: '#00b8e6',
     error: '#00b8e6',
     action: '#23DB2A'
- },
- customProperties: true,
+  },
+  customProperties: true
 })

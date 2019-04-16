@@ -5,8 +5,8 @@ export default {
   mode: 'spa',
 
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: pkg.name,
     meta: [
@@ -19,84 +19,65 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Pacifico'
-      },
-      {
-        rel: 'stylesheet',
-        href:
-        'https://fonts.googleapis.com/css?family=Bungee+Shade'
-      },
-      {
-        rel: 'stylesheet',
-        href:
-        'https://fonts.googleapis.com/css?family=Libre+Franklin'
-      },
-      {
-        rel: 'stylesheet',
-        href:
-        'https://fonts.googleapis.com/css?family=Shadows+Into+Light'
-      },
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons|Pacifico|Bungee+Shade|Libre+Franklin|Shadows+Into+Light'
+      }
     ]
   },
 
   /*
-  ** Customize the progress-bar color
-  */
+   ** Customize the progress-bar color
+   */
   loading: { color: '#fff' },
 
   /*
-  ** Global CSS
-  */
+   ** Global CSS
+   */
   css: [
     '~/assets/style/app.styl',
     '~/assets/style/font.styl',
-    '~/assets/style/colors.styl',
+    '~/assets/style/colors.styl'
   ],
 
   /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-    '@/plugins/vuetify'
-  ],
+   ** Plugins to load before mounting the App
+   */
+  plugins: ['@/plugins/vuetify'],
 
   /*
-  ** Nuxt.js modules
-  */
-  modules: [
-    '@nuxtjs/axios',
-
-  ],
+   ** Nuxt.js modules
+   */
+  modules: ['@nuxtjs/axios', '@nuxtjs/pwa'],
   axios: {
-    // proxyHeaders: false
+    // proxyHeaders: false,
+    // See https://github.com/nuxt-community/axios-module#options
   },
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     transpile: ['vuetify/lib'],
     plugins: [new VuetifyLoaderPlugin()],
     loaders: {
       stylus: {
-        import: [
-          '~assets/style/variables.styl', 
-      ],
-      scss: {
-        import : [
-           '~assets/style/variables.scss',
-        ],
-      }
+        import: ['~assets/style/variables.styl'],
+        scss: {
+          import: ['~assets/style/variables.scss']
+        }
       }
     },
     /*
-    ** You can extend webpack config here
-    */
+     ** You can extend webpack config here
+     */
     extend(config, ctx) {
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
     }
   }
 }

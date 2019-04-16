@@ -24,12 +24,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar
-      :clipped-left="clipped"
-      fixed
-      color="apricot"
-      app
-    >
+    <v-toolbar :clipped-left="clipped" fixed color="apricot" app>
       <v-toolbar-side-icon @click="drawer = !drawer" />
       <v-toolbar-title v-text="title" />
       <v-spacer />
@@ -39,10 +34,7 @@
         <nuxt />
       </v-container>
     </v-content>
-    <v-footer
-      :fixed="fixed"
-      app
-    >
+    <v-footer :fixed="fixed" app>
       <span>&copy; 2019</span>
     </v-footer>
   </v-app>
@@ -75,7 +67,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'That Instant 📷 Guy'
+      title: 'The Instant 📷 Guy'
     }
   }
 }
