@@ -1,0 +1,36 @@
+{
+  "name": "instant_camera_guy",
+  "version": "1.0.0",
+  "description": "Jake&#39;s website",
+  "author": "Cameron Poole",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.4.1",
+    "cross-env": "^5.2.0",
+    "node-sass": "^4.11.0",
+    "nuxt": "^2.4.0",
+    "prettier": "^1.17.0",
+    "vue-instagram": "^2.0.1",
+    "vuetify": "^1.5.5",
+    "vuetify-loader": "^1.2.1"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.7.1",
+    "nodemon": "^1.18.9",
+    "sass-loader": "^7.1.0",
+    "scss-loader": "0.0.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-jest": "^3.0.3"
+  }
+}

@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+  }
+
+  // Colours
+  $black:#4d4d4d;
+  $white:#ffffff;
+  $cream:#efeeeb;
+  $grey:#dad8d2;
+  $primary:#00b7c6;
+
+  $brown:#4d3b3b;
+  $c90grey:#bbbbbb;
+  $c90red:#dd342f; //#881615;
+  $c90green:#4b9121;
+  $c90black:#141311;
+  $screwGrey:#5e5f5a;
+  $red:#fd6139;
+  $blue:#424ba8;
+  $paper:#f8f1e1; //#d1cfb6;
+
+  // Typography
+  $bold:900;
+  $book:400;
+  $sans:'Lato',
+  sans-serif;
+  $cursive:'Shadows Into Light',
+  cursive;
+
+  // Animation
+  $dur:1s;
+
+  // Variables
+  $cassetteShadow1:-.9em;
+  $cassetteShadow2:2em;
+  $cassetteShadow3:0;
+  $cassetteShadow4:.5em;
