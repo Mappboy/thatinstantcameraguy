@@ -1,7 +1,7 @@
 <template>
   <v-layout>
     <v-flex text-xs-center>
-      <polaroid />
+      <poloroid />
     </v-flex>
   </v-layout>
 </template>

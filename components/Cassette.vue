@@ -79,7 +79,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 
   * {
     box-sizing: border-box;
@@ -118,7 +118,7 @@
   $cassetteShadow2:2em;
   $cassetteShadow3:0;
   $cassetteShadow4:.5em;
- 
+
 
   .cassetteOuter {
     position: relative;
