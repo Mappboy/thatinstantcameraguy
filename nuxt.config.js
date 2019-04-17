@@ -19,7 +19,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons|Pacifico|Bungee+Shade|Libre+Franklin|Shadows+Into+Light'
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
       }
     ]
   },
@@ -46,7 +46,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/axios', '@nuxtjs/pwa'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/pwa', 'nuxt-webfontloader'],
   axios: {
     // proxyHeaders: false,
     // See https://github.com/nuxt-community/axios-module#options
@@ -78,6 +78,16 @@ export default {
           exclude: /(node_modules)/
         })
       }
+    }
+  },
+  webfontloader: {
+    google: {
+      families: [
+        'Pacifico',
+        'Bungee+Shade',
+        'Libre+Franklin',
+        'Shadows+Into+Light'
+      ]
     }
   }
 }

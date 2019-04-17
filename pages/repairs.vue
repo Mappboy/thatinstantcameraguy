@@ -9,7 +9,7 @@
 <script>
 // https://codepen.io/tomhazledine/pen/IwEDu
 // https://codepen.io/kjawhar15/pen/JBreWY
-import Poloroid from '~/components/Poloroid.vue'
+import Poloroid from '~/components/Polaroid.vue'
 
 export default {
   components: {

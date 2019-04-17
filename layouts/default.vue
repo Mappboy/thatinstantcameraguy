@@ -27,6 +27,20 @@
     <v-toolbar :clipped-left="clipped" fixed color="apricot" app>
       <v-toolbar-side-icon @click="drawer = !drawer" />
       <v-toolbar-title v-text="title" />
+
+      <v-spacer></v-spacer>
+      <v-toolbar-items>
+        <v-btn
+          v-for="(item, i) in items"
+          :key="i"
+          :to="item.to"
+          router
+          exact
+          flat
+        >
+          {{ item.title }}
+        </v-btn>
+      </v-toolbar-items>
       <v-spacer />
     </v-toolbar>
     <v-content>
@@ -48,11 +62,6 @@ export default {
       drawer: false,
       fixed: false,
       items: [
-        {
-          icon: 'apps',
-          title: 'Welcome',
-          to: '/'
-        },
         {
           icon: 'gavel',
           title: 'Repairs',

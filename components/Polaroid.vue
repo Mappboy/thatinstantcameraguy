@@ -17,41 +17,45 @@ export default {
 </script>
 
 <template>
-  <div>
-    <div class="cont1">
-      <div class="top"></div>
-      <div class="printerin">
-        <div id="s1">
-          <div id="b"></div>
+  <v-container>
+    <div>
+      <div class="cont1">
+        <div class="top"></div>
+        <div class="printerin">
+          <div id="s1">
+            <div id="b">
+              <p>Coming Soon</p>
+            </div>
+          </div>
+        </div>
+        <div class="printer"></div>
+
+        <div class="upper">
+          <div class="rainbow1"></div>
+        </div>
+        <div class="downer">
+          <div class="rainbow"></div>
+        </div>
+        <div class="lense"></div>
+        <button class="button" @click="clickShutter" />
+        <div class="flash"></div>
+        <div class="nod"></div>
+        <div class="label">
+          <h3>Fixed</h3>
         </div>
       </div>
-      <div class="printer"></div>
-
-      <div class="upper">
-        <div class="rainbow1"></div>
-      </div>
-      <div class="downer">
-        <div class="rainbow"></div>
-      </div>
-      <div class="lense"></div>
-      <button class="button" @click="clickShutter" />
-      <div class="flash"></div>
-      <div class="nod"></div>
-      <div class="lable">
-        <h3>Fixed</h3>
-      </div>
     </div>
-  </div>
+  </v-container>
 </template>
 
 <style scoped>
-h2 {
-  margin-top: 0px;
-  margin-left: 30px;
-  font-family: 'Bungee Shade', cursive;
-  font-size: 45px;
+body {
+  text-align: center;
 }
-
+h3 {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 28px;
+}
 .cont1 {
   position: absolute;
   top: 100px;
@@ -60,38 +64,34 @@ h2 {
   perspective: 100px;
   margin-bottom: 600px;
 }
-
 .upper {
   position: absolute;
-  left: 550px;
+  left: 50px;
   width: 350px;
   height: 150px;
   border-radius: 20px 20px 0px 0px;
   background: white;
 }
-
 .downer {
   position: absolute;
   top: 150px;
-  left: 547.5px;
+  left: 47.5px;
   width: 355px;
   height: 60px;
   border-radius: 0px 0px 0px 0px;
   background: linear-gradient(rgb(240, 240, 240), white);
-  transform-style: preserve-3d;
+  tarnsform-style: preserve-3d;
   transform: rotatex(3deg);
   perspective: 100px;
 }
-
 .printer {
   position: absolute;
   top: 213px;
-  left: 545px;
+  left: 45px;
   width: 362px;
   height: 35px;
   background: rgb(30, 30, 30);
 }
-
 .printer::after {
   content: '';
   position: absolute;
@@ -102,17 +102,15 @@ h2 {
   border-radius: 10px 10px 0px 0px;
   background: rgb(50, 50, 50);
 }
-
 .printerin {
   position: absolute;
   top: 248px;
-  left: 545px;
+  left: 45px;
   width: 362px;
   height: 35px;
   border-radius: 0px 0px 20px 20px;
   background: rgb(30, 30, 30);
 }
-
 .printerin::before {
   content: '';
   position: absolute;
@@ -123,7 +121,6 @@ h2 {
   border-radius: 0px 0px 10px 10px;
   background: rgb(50, 50, 50);
 }
-
 .rainbow2 {
   position: absolute;
   top: -20px;
@@ -147,11 +144,10 @@ h2 {
   );
   opacity: 0.7;
 }
-
 .lense {
   position: absolute;
   top: 31px;
-  left: 671px;
+  left: 171px;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -159,7 +155,6 @@ h2 {
   border: 4px solid rgb(50, 50, 50);
   box-shadow: -10px 10px 30px rgb(50, 50, 50);
 }
-
 .lense::after {
   content: '';
   position: absolute;
@@ -170,7 +165,6 @@ h2 {
   border-radius: 50%;
   background: white;
 }
-
 .lense::before {
   content: '';
   position: absolute;
@@ -182,10 +176,9 @@ h2 {
   background: white;
   opacity: 0.5;
 }
-
 .button {
   position: absolute;
-  left: 600px;
+  left: 100px;
   top: 90px;
   width: 50px;
   height: 50px;
@@ -196,10 +189,9 @@ h2 {
   box-shadow: 0px 0px 5px black;
   outline: none;
 }
-
 .button:focus {
   position: absolute;
-  left: 600px;
+  left: 100px;
   top: 90px;
   width: 50px;
   height: 50px;
@@ -210,10 +202,9 @@ h2 {
   box-shadow: 0px 0px 5px black;
   outline: none;
 }
-
 .flash {
   position: absolute;
-  left: 800px;
+  left: 300px;
   top: 30px;
   width: 70px;
   height: 50px;
@@ -226,10 +217,9 @@ h2 {
   );
   border: solid;
 }
-
 .nod {
   position: absolute;
-  left: 815px;
+  left: 315px;
   top: 96px;
   width: 25px;
   height: 25px;
@@ -237,10 +227,9 @@ h2 {
   background: rgb(20, 20, 20);
   border: 5px solid rgb(50, 50, 50);
 }
-
-.lable {
+.label {
   position: absolute;
-  left: 570px;
+  left: 70px;
   top: 30px;
   width: 90px;
   height: 40px;
@@ -248,15 +237,13 @@ h2 {
   border-radius: 10px 10px 10px 10px;
   text-align: center;
 }
-
-.lable h3 {
+.label h3 {
   position: absolute;
   top: -10px;
   left: 10px;
   color: white;
   font-family: 'Roboto', sans-serif;
 }
-
 .rainbow1 {
   opacity: 0.8;
   position: absolute;
@@ -280,7 +267,6 @@ h2 {
     #00b2ff 48px
   );
 }
-
 .rainbow {
   position: absolute;
   top: -2px;
@@ -302,10 +288,9 @@ h2 {
     #00b2ff 40px,
     #00b2ff 48px
   );
-  transform-style: preserve-3d;
+  tarnsform-style: preserve-3d;
   transform: rotatex(10deg);
 }
-
 #s1 {
   position: absolute;
   top: -240px;
@@ -315,13 +300,12 @@ h2 {
   border: 5px solid white;
   border-bottom: 30px solid white;
   box-shadow: 0px 0px 40px black;
-  background: url('../static/profile_pic.jpg');
+  background: url('https://cdni.rbth.com/rbthmedia/images/all/2017/05/28/russia_selfie.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   transition: 0.5s;
-  transform-origin: top;
+  transfrom-origin: top;
 }
-
 #b {
   position: absolute;
   top: 0px;
@@ -330,13 +314,12 @@ h2 {
   height: 180px;
   background: black;
   transition: 0.5s;
-  transform-origin: top;
+  transfrom-origin: top;
 }
-
 .top {
   position: absolute;
   top: -10px;
-  left: 600px;
+  left: 100px;
   background: rgb(40, 40, 40);
   width: 250px;
   height: 20px;
@@ -377,7 +360,6 @@ h2 {
     background: rgb(0, 0, 0);
   }
 }
-
 @keyframes show {
   from {
     opacity: 1;
